@@ -1,0 +1,9 @@
+* Conda files
+To install, run
+#+BEGIN_SRC bash
+  git clone https://github.com/benjamin-james/conda-recipes
+  cd conda-recipes
+  autoreconf -i && ./configure
+  mamba env create --file=benj.yml --name=myenv
+#+END_SRC
+** Components
