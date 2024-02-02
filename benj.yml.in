@@ -112,14 +112,15 @@ dependencies:
   - conda-forge::python-igraph
   - conda-forge::networkx
   - conda-forge::fa2
-  - @FAISS_VERSION@
+  @FAISS_VERSION@
   - conda-forge::python-annoy
   ## ml
   - conda-forge::xgboost
   - conda-forge::ngboost
-  - @PYTORCH_VERSION@
+  @PYTORCH_VERSION@
   - pytorch::torchvision
   - pytorch::torchaudio
+  @CPUONLY@
   #- py-opencv
   ## genomics
   - bioconda::pyranges

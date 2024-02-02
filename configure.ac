@@ -47,27 +47,37 @@ esac
 
 ### Check CUDA version
 AC_DEFUN([AX_CUDA_VERSION], [
-    # Use nvcc to find CUDA version, then parse it with grep and sed
-    CUDA_VERSION=`nvcc --version | grep "release" | sed 's/.*release //' | sed 's/,.*//'`
+    AC_CHECK_PROG([NVCC_FOUND], [nvcc], [yes], [no])
+    if test "x$NVCC_FOUND" = "xyes"; then
+        CUDA_VERSION=`nvcc --version | grep "release" | sed 's/.*release //' | sed 's/,.*//'`
+	AC_MSG_NOTICE([Using CUDA version $CUDA_VERSION])
+    else
+        CUDA_VERSION="null"
+	AC_MSG_NOTICE([Not using CUDA])
+    fi
     AC_SUBST([CUDA_VERSION], [$CUDA_VERSION])
-    AC_MSG_NOTICE([Using CUDA version $CUDA_VERSION])
 ])
 
 AX_CUDA_VERSION
 
-AS_IF([test "$CUDA_VERSION" != "no"],
-    [PYTORCH_VERSION="pytorch::pytorch-cuda=$CUDA_VERSION"],
-    [PYTORCH_VERSION="pytorch::pytorch"])
+AS_IF([test "x$CUDA_VERSION" != "xnull"],
+    [PYTORCH_VERSION="- pytorch::pytorch-cuda=$CUDA_VERSION"],
+    [PYTORCH_VERSION="- pytorch::pytorch"])
 AC_SUBST(PYTORCH_VERSION)
 
-AS_IF([test "$CUDA_VERSION" != "no"],
+AS_IF([test "x$CUDA_VERSION" != "xnull"],
+    [CPUONLY=""],
+    [CPUONLY="- pytorch::cpuonly"])
+AC_SUBST(CPUONLY)
+
+AS_IF([test "x$CUDA_VERSION" != "xnull"],
     [NVIDIA_CHANNEL="- nvidia"],
     [NVIDIA_CHANNEL=""])
 AC_SUBST(NVIDIA_CHANNEL)
 
-AS_IF([test "$CUDA_VERSION" != "no"],
-    [FAISS_VERSION="pytorch::faiss-cpu"],
-    [FAISS_VERSION="pytorch::faiss-gpu"])
+AS_IF([test "x$CUDA_VERSION" != "xnull"],
+    [FAISS_VERSION="- pytorch::faiss-cpu"],
+    [FAISS_VERSION="- pytorch::faiss-gpu"])
 AC_SUBST(FAISS_VERSION)
 
 
