@@ -90,11 +90,13 @@ dependencies:
   - conda-forge::doxygen
   ## other
   - bioconda::bioawk
+  - conda-forge::rust
+  - conda-forge::go
+  - conda-forge::sbcl
   - conda-forge::pigz
   - conda-forge::zstd
   - conda-forge::jupyterlab
   - conda-forge::nbconvert
-  - conda-forge::openai
   - bioconda::snakemake
   - bioconda::nextflow
   - bioconda::plink
@@ -173,9 +175,9 @@ dependencies:
   - bioconda::r-signac>=1.12.0
   # - r-seuratdisk # icu error forces R below 4.1
   - bioconda::r-monocle3
-  - @CC@
-  - @CXX@
-  - @FC@
+  - conda-forge::c-compiler
+  - conda-forge::cxx-compiler
+  - conda-forge::fortran-compiler
   ### deg
   - bioconda::bioconductor-deseq2
   - bioconda::bioconductor-ruvseq
@@ -198,6 +200,7 @@ dependencies:
   - conda-forge::r-mass
   - conda-forge::r-rfast
   - conda-forge::r-trust
+  - conda-forge::r-lfe
   - conda-forge::r-rcpp>=1.0.7 ## nebula
   - conda-forge::r-rcppannoy
   - conda-forge::r-rcppziggurat
@@ -223,6 +226,7 @@ dependencies:
   - conda-forge::r-ggpubr
   - conda-forge::r-ggrastr
   - conda-forge::r-ggrepel
+  - conda-forge::r-ggtext
   - bioconda::bioconductor-ggbio
   # - bioconda::r-extrafont
   - conda-forge::r-uwot

@@ -41,7 +41,10 @@ case "$host_os" in
     AC_SUBST([FC], [conda-forge::gfortran_linux-64])
     ;;
   *)
-    AC_MSG_ERROR([unsupported operating system])
+    AC_MSG_RESULT([Other OS, using default])
+    AC_SUBST([CC], [conda-forge::c-compiler])
+    AC_SUBST([CXX], [conda-forge::cxx-compiler])
+    AC_SUBST([FC], [conda-forge::fortran-compiler])
     ;;
 esac
 
@@ -76,8 +79,8 @@ AS_IF([test "x$CUDA_VERSION" != "xnull"],
 AC_SUBST(NVIDIA_CHANNEL)
 
 AS_IF([test "x$CUDA_VERSION" != "xnull"],
-    [FAISS_VERSION="- pytorch::faiss-cpu"],
-    [FAISS_VERSION="- pytorch::faiss-gpu"])
+    [FAISS_VERSION="- pytorch::faiss-gpu"],
+    [FAISS_VERSION="- pytorch::faiss-cpu"])
 AC_SUBST(FAISS_VERSION)
 
 
