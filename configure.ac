@@ -1,4 +1,4 @@
-AC_INIT([conda], [0.0.1])
+AC_INIT([conda-recipes], [0.0.1])
 
 AC_CANONICAL_BUILD
 AC_CANONICAL_HOST
@@ -103,6 +103,6 @@ AC_SUBST(FAISS_VERSION)
 ## 11. rstats
 ## 12. archr
 
-AC_CONFIG_FILES([benj.yml])
+AC_CONFIG_FILES([full.yml])
 AC_OUTPUT
 
