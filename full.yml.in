@@ -10,10 +10,10 @@
 name: full
 
 channels:
-  - conda-forge
-  - bioconda
   - pytorch
   @NVIDIA_CHANNEL@
+  - conda-forge
+  - bioconda
   
 dependencies:
   ## Must have
@@ -56,8 +56,6 @@ dependencies:
   - bioconda::bioconductor-complexheatmap
   - bioconda::bioconductor-genomicfeatures
   - bioconda::bioconductor-rtracklayer
-  - bioconda::snakemake
-  - bioconda::nextflow
   - conda-forge::r-cairo
   - conda-forge::cairo
   - conda-forge::r-gsl
