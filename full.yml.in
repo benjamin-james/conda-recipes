@@ -11,9 +11,9 @@ name: full
 
 channels:
   - pytorch
-  @NVIDIA_CHANNEL@
   - conda-forge
   - bioconda
+  @NVIDIA_CHANNEL@
   
 dependencies:
   ## Must have
@@ -67,7 +67,7 @@ dependencies:
   - conda-forge::r-upsetr
   - conda-forge::r-ggupset
   ## c++
-  - conda-forge::eigen
+  - conda-forge::eigen>=3.4.0
   - conda-forge::armadillo
   - conda-forge::hdf5
   - conda-forge::igraph
@@ -133,6 +133,9 @@ dependencies:
   - bioconda::pybiomart
   - bioconda::alevin-fry
   - bioconda::regtools
+  - bioconda::kb-python
+  - bioconda::bustools
+  - bioconda::kallisto
   ### bioconductor
   - bioconda::bioconductor-motifmatchr
   - bioconda::bioconductor-tfbstools
