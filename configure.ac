@@ -65,7 +65,7 @@ AX_CUDA_VERSION
 
 AS_IF([test "x$CUDA_VERSION" != "xnull"],
     [PYTORCH_VERSION="- pytorch::pytorch-cuda=$CUDA_VERSION"],
-    [PYTORCH_VERSION="- pytorch::pytorch"])
+    [PYTORCH_VERSION="- pytorch::pytorch==1.13.1"])
 AC_SUBST(PYTORCH_VERSION)
 
 AS_IF([test "x$CUDA_VERSION" != "xnull"],
