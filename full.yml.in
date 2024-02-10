@@ -104,7 +104,7 @@ dependencies:
   - conda-forge::pandoc
   ## plots
   - conda-forge::seaborn
-  - conda-forge::matplotlib<3.7
+  - conda-forge::matplotlib
   - conda-forge::adjusttext
   ## networks
   - conda-forge::umap-learn>=0.3.10
@@ -177,9 +177,9 @@ dependencies:
   - bioconda::r-signac>=1.12.0
   # - r-seuratdisk # icu error forces R below 4.1
   - bioconda::r-monocle3
-  - conda-forge::c-compiler
-  - conda-forge::cxx-compiler
-  - conda-forge::fortran-compiler
+  - @CC@
+  - @CXX@
+  - @FC@
   ### deg
   - bioconda::bioconductor-deseq2
   - bioconda::bioconductor-ruvseq
@@ -289,6 +289,6 @@ dependencies:
       - git+https://github.com/kellislab/benj
       - git+https://github.com/FinucaneLab/fine-mapping-inf#subdirectory=susieinf
       - git+https://github.com/FinucaneLab/fine-mapping-inf#subdirectory=finemapinf
-      - symphonypy
+p      - symphonypy
       - igv-notebook
 #      - cca-zoo ## TODO dependencies check

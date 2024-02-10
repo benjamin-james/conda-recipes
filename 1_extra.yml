@@ -1,0 +1,43 @@
+channels:
+  - conda-forge
+
+dependencies:
+  - conda-forge::highfive
+  - conda-forge::dlib
+  - conda-forge::doxygen
+  - conda-forge::yaml-cpp
+  ## languages
+  - conda-forge::r-base
+  - conda-forge::perl
+  - conda-forge::rust
+  - conda-forge::julia
+  - conda-forge::octave
+  - conda-forge::go
+  - conda-forge::sbcl
+  - conda-forge::guile
+  ## jupyter
+  - conda-forge::jupyterlab
+  - conda-forge::nbconvert
+  - conda-forge::nbsphinx
+  - conda-forge::pandoc
+  - conda-forge::r-irkernel
+  - conda-forge::octave_kernel
+  ## python
+  - conda-forge::seaborn
+  - conda-forge::statsmodels
+  - conda-forge::scikit-misc
+  ## julia
+  - conda-forge::pyjulia
+  - conda-forge::r-juliacall
+  ## download
+  - conda-forge::bdbag
+  - conda-forge::pytables
+  - conda-forge::natsort
+  - conda-forge::boltons
+  - conda-forge::polars
+  - conda-forge::kneed
+  ## testing
+  - conda-forge::pytest
+  - conda-forge::coverage
+  - conda-forge::pylint
+  - conda-forge::python-lsp-server

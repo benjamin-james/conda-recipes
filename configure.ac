@@ -1,9 +1,5 @@
 AC_INIT([conda-recipes], [0.0.1])
 
-AC_CANONICAL_BUILD
-AC_CANONICAL_HOST
-AC_CANONICAL_TARGET
-
 #AC_ARG_ENABLE([CONDA_PREFIX], [Environment variable designating the current conda prefix], 
 ### Check for Conda prefix and conda command
 AC_ARG_VAR([CONDA_PREFIX], [CONDA_PREFIX environment variable is not set. Please set it before configuring.])
@@ -25,28 +21,28 @@ AC_DEFUN([AC_CHECK_MAMBA_OR_CONDA], [
 AC_CHECK_MAMBA_OR_CONDA
 
 ### Check for OS based compiler packages
-AC_CANONICAL_HOST
-AC_MSG_CHECKING([for operating system $host_os])
-case "$host_os" in
-  *darwin*)
-    AC_MSG_RESULT([Mac OS X detected])
-    AC_SUBST([CC], [conda-forge::clang_osx-64])
-    AC_SUBST([CXX], [conda-forge::clangxx_osx-64])
-    AC_SUBST([FC], [conda-forge::gfortran_osx-64])
-    ;;
-  *linux*)
-    AC_MSG_RESULT([Linux detected])
-    AC_SUBST([CC], [conda-forge::gcc_linux-64])
-    AC_SUBST([CXX], [conda-forge::gxx_linux-64])
-    AC_SUBST([FC], [conda-forge::gfortran_linux-64])
-    ;;
-  *)
-    AC_MSG_RESULT([Other OS, using default])
-    AC_SUBST([CC], [conda-forge::c-compiler])
-    AC_SUBST([CXX], [conda-forge::cxx-compiler])
-    AC_SUBST([FC], [conda-forge::fortran-compiler])
-    ;;
-esac
+dnl AC_CANONICAL_HOST
+dnl AC_MSG_CHECKING([for operating system $host_os])
+dnl case "$host_os" in
+dnl   *linux*)
+dnl     AC_MSG_RESULT([Linux detected])
+dnl     AC_SUBST([CC], [conda-forge::gcc_linux-64])
+dnl     AC_SUBST([CXX], [conda-forge::gxx_linux-64])
+dnl     AC_SUBST([FC], [conda-forge::gfortran_linux-64])
+dnl     ;;
+dnl   *darwin*)
+dnl     AC_MSG_RESULT([Mac OS X detected])
+dnl     AC_SUBST([CC], [conda-forge::clang_osx-64])
+dnl     AC_SUBST([CXX], [conda-forge::clangxx_osx-64])
+dnl     AC_SUBST([FC], [conda-forge::gfortran_osx-64])
+dnl     ;;
+dnl   *)
+dnl     AC_MSG_RESULT([Other OS, using default])
+dnl     AC_SUBST([CC], [conda-forge::c-compiler])
+dnl     AC_SUBST([CXX], [conda-forge::cxx-compiler])
+dnl     AC_SUBST([FC], [conda-forge::fortran-compiler])
+dnl     ;;
+dnl esac
 
 ### Check CUDA version
 AC_DEFUN([AX_CUDA_VERSION], [
@@ -65,7 +61,7 @@ AX_CUDA_VERSION
 
 AS_IF([test "x$CUDA_VERSION" != "xnull"],
     [PYTORCH_VERSION="- pytorch::pytorch-cuda=$CUDA_VERSION"],
-    [PYTORCH_VERSION="- pytorch::pytorch==1.13.1"])
+    [PYTORCH_VERSION="- conda-forge::pytorch-cpu"])
 AC_SUBST(PYTORCH_VERSION)
 
 AS_IF([test "x$CUDA_VERSION" != "xnull"],
@@ -80,8 +76,13 @@ AC_SUBST(NVIDIA_CHANNEL)
 
 AS_IF([test "x$CUDA_VERSION" != "xnull"],
     [FAISS_VERSION="- pytorch::faiss-gpu"],
-    [FAISS_VERSION="- pytorch::faiss-cpu"])
+    [FAISS_VERSION="- conda-forge::faiss-cpu"])
 AC_SUBST(FAISS_VERSION)
+
+AS_IF([test "x$CUDA_VERSION" != "xnull"],
+    [PYXGB_VERSION="- conda-forge::py-xgboost-gpu"],
+    [PYXGB_VERSION="- conda-forge::py-xgboost-cpu"])
+AC_SUBST(PYXGB_VERSION)
 
 
 ### Components
@@ -103,6 +104,6 @@ AC_SUBST(FAISS_VERSION)
 ## 11. rstats
 ## 12. archr
 
-AC_CONFIG_FILES([full.yml])
+AC_CONFIG_FILES([3_torch.yml])
 AC_OUTPUT
 

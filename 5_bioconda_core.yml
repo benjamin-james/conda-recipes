@@ -1,0 +1,33 @@
+channels:
+  - conda-forge
+  - bioconda
+
+dependencies:
+  - bioconda::igv
+  - bioconda::samtools
+  - bioconda::htslib
+  - bioconda::bedtools
+  - bioconda::bioawk
+  - bioconda::bcftools
+  - bioconda::kallisto
+  - bioconda::bustools
+  - bioconda::subread
+  - bioconda::star
+  - bioconda::alevin-fry
+  - bioconda::snakemake
+  - bioconda::nextflow
+  - bioconda::plink
+  - bioconda::plink2
+  - bioconda::perl-bioperl
+  ## r
+  - bioconda::r-harmony
+  - bioconda::r-signac>=1.12.0
+  - conda-forge::r-seurat>=5.0.0
+  - conda-forge::r-seuratobject>=5.0.0
+  - bioconda::r-monocle3
+  - bioconda::r-liger
+  - bioconda::scprep
+  ## igv
+  - bioconda::bioconductor-igvr
+  - bioconda::igv-reports
+  - bioconda::igvtools

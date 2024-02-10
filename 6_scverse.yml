@@ -1,0 +1,30 @@
+channels:
+  - conda-forge
+  - bioconda
+
+dependencies:
+  - conda-forge::anndata>=0.10.5
+  - conda-forge::scanpy>=1.9.7
+  - conda-forge::muon
+  - conda-forge::squidpy
+  - conda-forge::mnnpy
+  - conda-forge::celltypist
+  - conda-forge::scvelo
+  - conda-forge::bamnostic
+  - bioconda::velocyto.py
+  - bioconda::scrublet
+  - bioconda::harmonypy
+  - bioconda::multivelo
+  ## python
+  - bioconda::pyranges
+  - bioconda::pybedtools
+  - bioconda::pysam
+  - bioconda::pytabix
+  - bioconda::pybiomart
+  - bioconda::gtfparse
+  - bioconda::pyjaspar
+  - bioconda::kb-python
+  - bioconda::py-bgzip
+  ## scvi
+  - conda-forge::scvi-tools
+

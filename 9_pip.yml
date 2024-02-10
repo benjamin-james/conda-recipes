@@ -1,0 +1,14 @@
+channels:
+  - conda-forge
+
+dependencies:
+  - conda-forge::pip
+  - pip:
+    - symphonypy
+    - igv-notebook
+    - bbknn
+    - pychromvar
+    - magic-impute
+    - git+https://github.com/CostaLab/scopen ### pip link doesn't work
+    - git+https://github.com/FinucaneLab/fine-mapping-inf#subdirectory=susieinf
+    - git+https://github.com/FinucaneLab/fine-mapping-inf#subdirectory=finemapinf

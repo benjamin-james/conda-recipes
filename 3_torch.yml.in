@@ -1,0 +1,28 @@
+
+channels:
+  - pytorch
+  - conda-forge
+  @NVIDIA_CHANNEL@
+  
+dependencies:
+  @FAISS_VERSION@
+  @PYTORCH_VERSION@
+  - pytorch::torchvision
+  - pytorch::torchaudio
+  @PYXGB_VERSION@
+  - conda-forge::networkx
+  - conda-forge::retworkx
+  - conda-forge::python-infomap
+  - conda-forge::leidenalg
+  - conda-forge::umap-learn
+  - conda-forge::python-igraph
+  - conda-forge::fa2
+  - conda-forge::python-annoy
+  - conda-forge::graphtools
+  - conda-forge::numpyro
+  - conda-forge::lightning
+  - conda-forge::torchmetrics
+  - conda-forge::ml-collections
+  - conda-forge::pyro-ppl
+  - conda-forge::flax
+  @CPUONLY@

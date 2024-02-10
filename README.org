@@ -4,6 +4,11 @@ To install, run
   git clone https://github.com/benjamin-james/conda-recipes
   cd conda-recipes
   ./configure
-  mamba env create --file=full.yml --name=myenv
+  mamba env create --name=test1 --file=0_core.yml
+  mamba env update --name=test1 --file=1_extra.yml
+  mamba env update --name=test1 --file=2_rcore.yml
+  mamba env update --name=test1 --file=3_torch.yml
+  mamba env update --name=test1 --file=4_bioc.yml
+  mamba env update --name=test1 --file=5_bioconda.yml
 #+END_SRC
 ** Components
