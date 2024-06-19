@@ -22,6 +22,10 @@ dependencies:
   - bioconda::sinto ## requires pysam
   - bioconda::cromwell
   - bioconda::caper
+  - bioconda::ucsc-bedgraphtobigwig
+  - bioconda::pybigwig
+  - bioconda::meme
+  - bioconda::homer
   ## r
   - bioconda::r-harmony
   - bioconda::r-signac>=1.12.0
