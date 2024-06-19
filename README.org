@@ -11,4 +11,7 @@ To install, run
   mamba env update --name=test1 --file=4_bioc.yml
   mamba env update --name=test1 --file=5_bioconda.yml
 #+END_SRC
-** Components
+** Updates
+- Once https://github.com/bioconda/bioconda-recipes/issues/37805 is fixed pysam can be installed on 3.11 or greater
+- pytorch::pytorch-cpu requires mkl
+- conda-forge::pytorch=*=*cpu* is not installable with pytorch torchvision

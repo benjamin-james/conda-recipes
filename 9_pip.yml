@@ -7,6 +7,7 @@ dependencies:
     - symphonypy
     - igv-notebook
     - bbknn
+    #- dictys
     - pychromvar
     - magic-impute
     - git+https://github.com/CostaLab/scopen ### pip link doesn't work

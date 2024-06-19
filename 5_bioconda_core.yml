@@ -10,7 +10,7 @@ dependencies:
   - bioconda::bioawk
   - bioconda::bcftools
   - bioconda::kallisto
-  - bioconda::bustools
+  #- bioconda::bustools  ### todo fix
   - bioconda::subread
   - bioconda::star
   - bioconda::alevin-fry
@@ -19,15 +19,21 @@ dependencies:
   - bioconda::plink
   - bioconda::plink2
   - bioconda::perl-bioperl
+  - bioconda::sinto ## requires pysam
+  - bioconda::cromwell
+  - bioconda::caper
   ## r
   - bioconda::r-harmony
   - bioconda::r-signac>=1.12.0
   - conda-forge::r-seurat>=5.0.0
   - conda-forge::r-seuratobject>=5.0.0
-  - bioconda::r-monocle3
+  #- bioconda::r-monocle3 ## requires 4.2
   - bioconda::r-liger
   - bioconda::scprep
   ## igv
-  - bioconda::bioconductor-igvr
-  - bioconda::igv-reports
+  #- bioconda::bioconductor-igvr ##old r (<3.7) required
+  - bioconda::igv-reports ### needs pysam
+  - bioconda::pysam ### TODO WAIT UNTIL BIOCONDA HAS 3.11 support
   - bioconda::igvtools
+  ## other
+  #- bioconda::pydnase ## error: py<11 required

@@ -2,10 +2,12 @@ channels:
   - conda-forge
 
 dependencies:
-  - conda-forge::r-base==4.3.2
+  - conda-forge::r-base==4.3.*
   - conda-forge::r-devtools
   - conda-forge::r-matrix
   - conda-forge::r-tidyverse
+  - conda-forge::r-irlba
+  - conda-forge::r-rspectra
   - conda-forge::r-openxlsx
   - conda-forge::r-seriation
   - conda-forge::r-gridextra

@@ -61,8 +61,13 @@ AX_CUDA_VERSION
 
 AS_IF([test "x$CUDA_VERSION" != "xnull"],
     [PYTORCH_VERSION="- pytorch::pytorch-cuda=$CUDA_VERSION"],
-    [PYTORCH_VERSION="- conda-forge::pytorch-cpu"])
+    [PYTORCH_VERSION="- conda-forge::pytorch=*=*cpu*"])
 AC_SUBST(PYTORCH_VERSION)
+
+AS_IF([test "x$CUDA_VERSION" != "xnull"],
+    [TENSORFLOW_VERSION="- conda-forge::tensorflow"],
+    [TENSORFLOW_VERSION="- conda-forge::tensorflow-cpu"])
+AC_SUBST(TENSORFLOW_VERSION)
 
 AS_IF([test "x$CUDA_VERSION" != "xnull"],
     [CPUONLY=""],
@@ -73,6 +78,11 @@ AS_IF([test "x$CUDA_VERSION" != "xnull"],
     [NVIDIA_CHANNEL="- nvidia"],
     [NVIDIA_CHANNEL=""])
 AC_SUBST(NVIDIA_CHANNEL)
+
+AS_IF([test "x$CUDA_VERSION" != "xnull"],
+    [TORCH_CHANNEL="pytorch"],
+    [TORCH_CHANNEL="conda-forge"])
+AC_SUBST(TORCH_CHANNEL)
 
 AS_IF([test "x$CUDA_VERSION" != "xnull"],
     [FAISS_VERSION="- pytorch::faiss-gpu"],

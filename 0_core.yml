@@ -3,6 +3,8 @@ channels:
   
 dependencies:
   - conda-forge::mamba
+  - conda-forge::python==3.11
+  - conda-forge::r-base==4.3.*
  ### numerical
   - conda-forge::cython
   - conda-forge::numba

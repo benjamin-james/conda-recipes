@@ -6,6 +6,7 @@ dependencies:
   - conda-forge::dlib
   - conda-forge::doxygen
   - conda-forge::yaml-cpp
+  - conda-forge::suitesparse
   ## languages
   - conda-forge::r-base
   - conda-forge::perl
@@ -25,7 +26,7 @@ dependencies:
   ## python
   - conda-forge::seaborn
   - conda-forge::statsmodels
-  - conda-forge::scikit-misc
+  #- conda-forge::scikit-misc ## TODO: update when allowing py 3.12 builds
   ## julia
   - conda-forge::pyjulia
   - conda-forge::r-juliacall
@@ -36,6 +37,7 @@ dependencies:
   - conda-forge::boltons
   - conda-forge::polars
   - conda-forge::kneed
+  - conda-forge::adjusttext
   ## testing
   - conda-forge::pytest
   - conda-forge::coverage

@@ -1,14 +1,15 @@
 
 channels:
-  - pytorch
+  - @TORCH_CHANNEL@
   - conda-forge
   @NVIDIA_CHANNEL@
   
 dependencies:
+  # @CPUONLY@ 
   @FAISS_VERSION@
   @PYTORCH_VERSION@
-  - pytorch::torchvision
-  - pytorch::torchaudio
+  - @TORCH_CHANNEL@::torchvision
+  - @TORCH_CHANNEL@::torchaudio ## TODO remove in cpu builds
   @PYXGB_VERSION@
   - conda-forge::networkx
   - conda-forge::retworkx
@@ -19,10 +20,9 @@ dependencies:
   - conda-forge::fa2
   - conda-forge::python-annoy
   - conda-forge::graphtools
-  - conda-forge::numpyro
+  - conda-forge::numpyro>=0.12.1
   - conda-forge::lightning
   - conda-forge::torchmetrics
   - conda-forge::ml-collections
-  - conda-forge::pyro-ppl
+  - conda-forge::pyro-ppl>=1.6.0
   - conda-forge::flax
-  @CPUONLY@

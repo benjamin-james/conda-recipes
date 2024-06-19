@@ -18,7 +18,7 @@ dependencies:
   ## python
   - bioconda::pyranges
   - bioconda::pybedtools
-  - bioconda::pysam
+  - bioconda::pysam ### until pysam gets fixed
   - bioconda::pytabix
   - bioconda::pybiomart
   - bioconda::gtfparse
