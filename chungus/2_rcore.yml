@@ -79,3 +79,6 @@ dependencies:
   - conda-forge::r-shinythemes
   ## misc
   - conda-forge::libudunits2
+  - conda-forge::r-units
+  - conda-forge::r-sf
+  - conda-forge::r-spdep

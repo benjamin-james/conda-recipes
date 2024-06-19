@@ -11,7 +11,7 @@ dependencies:
   - @TORCH_CHANNEL@::torchvision
   @TORCHAUDIO_VERSION@
   @PYXGB_VERSION@
-  @TENSORFLOW_VERSION@
+#  @TENSORFLOW_VERSION@
   - conda-forge::networkx
   - conda-forge::retworkx
   - conda-forge::python-infomap

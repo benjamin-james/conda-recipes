@@ -7,25 +7,11 @@ channels:
 
 dependencies:
   - conda-forge::python==3.8
-  - conda-forge::h5py>=2.10.0
-  - conda-forge::numpy==1.23.4
-  - conda-forge::pandas>=1.3.4
-  - conda-forge::scipy>=1.4.1
-  - conda-forge::scikit-learn>=1.1.2
-  @TENSORFLOW_VERSION@==2.8.0
-  - conda-forge::tensorflow-estimator=2.8.0
-  - conda-forge::tensorflow-probability==0.15.0
-  - conda-forge::protobuf==3.20.0
-  - conda-forge::tqdm==4.48.2
-  - conda-forge::deepdish==0.3.7
-  - bioconda::deeplift==0.6.13.0
-  - conda-forge::weasyprint==52.5
   - bioconda::samtools
   - bioconda::bedtools
   - bioconda::ucsc-bedgraphtobigwig
   - bioconda::pybigwig
   - bioconda::meme
-  - bioconda::pyfaidx==0.6.1
   - conda-forge::pip
   - pip:
     - chrombpnet
