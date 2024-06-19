@@ -24,7 +24,7 @@ dependencies:
   - bioconda::caper
   - bioconda::ucsc-bedgraphtobigwig
   - bioconda::pybigwig
-  - bioconda::meme
+  ##- bioconda::meme ## TODO icu error
   - bioconda::homer
   ## r
   - bioconda::r-harmony
