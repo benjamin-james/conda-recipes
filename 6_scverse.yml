@@ -7,7 +7,7 @@ dependencies:
   - conda-forge::scanpy>=1.9.7
   - conda-forge::muon
   - conda-forge::squidpy
-  - bioconda::mnnpy
+  #  - bioconda::mnnpy ## needs 3.10 
   - bioconda::celltypist
   - conda-forge::scvelo
   - conda-forge::bamnostic
@@ -18,7 +18,7 @@ dependencies:
   ## python
   - bioconda::pyranges
   - bioconda::pybedtools
-  - bioconda::pysam ### until pysam gets fixed
+  - bioconda::pysam
   - bioconda::pytabix
   - bioconda::pybiomart
   - bioconda::gtfparse
