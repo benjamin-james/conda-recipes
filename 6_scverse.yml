@@ -7,8 +7,8 @@ dependencies:
   - conda-forge::scanpy>=1.9.7
   - conda-forge::muon
   - conda-forge::squidpy
-  - conda-forge::mnnpy
-  - conda-forge::celltypist
+  - bioconda::mnnpy
+  - bioconda::celltypist
   - conda-forge::scvelo
   - conda-forge::bamnostic
   - bioconda::velocyto.py
