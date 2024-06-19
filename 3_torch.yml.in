@@ -9,8 +9,9 @@ dependencies:
   @FAISS_VERSION@
   @PYTORCH_VERSION@
   - @TORCH_CHANNEL@::torchvision
-  - @TORCH_CHANNEL@::torchaudio ## TODO remove in cpu builds
+  @TORCHAUDIO_VERSION@
   @PYXGB_VERSION@
+  - @TENSORFLOW_VERSION@
   - conda-forge::networkx
   - conda-forge::retworkx
   - conda-forge::python-infomap

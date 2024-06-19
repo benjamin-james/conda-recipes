@@ -65,7 +65,7 @@ AS_IF([test "x$CUDA_VERSION" != "xnull"],
 AC_SUBST(PYTORCH_VERSION)
 
 AS_IF([test "x$CUDA_VERSION" != "xnull"],
-    [TENSORFLOW_VERSION="- conda-forge::tensorflow"],
+    [TENSORFLOW_VERSION="- conda-forge::tensorflow-gpu"],
     [TENSORFLOW_VERSION="- conda-forge::tensorflow-cpu"])
 AC_SUBST(TENSORFLOW_VERSION)
 
@@ -93,6 +93,11 @@ AS_IF([test "x$CUDA_VERSION" != "xnull"],
     [PYXGB_VERSION="- conda-forge::py-xgboost-gpu"],
     [PYXGB_VERSION="- conda-forge::py-xgboost-cpu"])
 AC_SUBST(PYXGB_VERSION)
+
+AS_IF([test "x$CUDA_VERSION" != "xnull"],
+    [TORCHAUDIO_VERSION="- pytorch::torchaudio"],
+    [TORCHAUDIO_VERSION=""])
+AC_SUBST(TORCHAUDIO_VERSION)
 
 
 ### Components

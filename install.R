@@ -3,11 +3,11 @@
 installExtraPackages <- function(upgrade="never", seurat=TRUE, ...) {
 ### Reinstall seurat
     if (seurat) {
-        remotes::install_github("satijalab/seurat-object", "v5.0.1", upgrade=upgrade, ...)
-        remotes::install_github("satijalab/seurat", "v5.0.1", upgrade=upgrade, ...)
+        remotes::install_github("satijalab/seurat-object", "v5.0.2", upgrade=upgrade, ...)
+        remotes::install_github("satijalab/seurat", "v5.1.0", upgrade=upgrade, ...)
         remotes::install_github("satijalab/seurat-data", "seurat5", upgrade=upgrade, ...)
         remotes::install_github("satijalab/seurat-wrappers", "seurat5", upgrade=upgrade, ...)
-        remotes::install_github("stuart-lab/signac", "1.12.0", upgrade=upgrade, ...)
+        remotes::install_github("stuart-lab/signac", "1.13.0", upgrade=upgrade, ...)
         tryCatch({
             ### For some reason the github refs/branches do not work
             remotes::install_github("satijalab/azimuth", "0.5.0", upgrade=upgrade, ...)
@@ -17,7 +17,6 @@ installExtraPackages <- function(upgrade="never", seurat=TRUE, ...) {
         })
     }
 ### Tools
-    devtools::install_github('lhe17/nebula', upgrade=upgrade, ...)
     devtools::install_github('cole-trapnell-lab/monocle3', upgrade=upgrade, ...)
     devtools::install_github('cole-trapnell-lab/cicero-release', ref='monocle3', upgrade=upgrade, ...)
     devtools::install_github('scverse/anndataR', upgrade=upgrade, ...)
@@ -28,6 +27,7 @@ installExtraPackages <- function(upgrade="never", seurat=TRUE, ...) {
     devtools::install_github("sankaranlab/SCAVENGE", upgrade=upgrade, ...)
     BiocManager::install("SNPlocs.Hsapiens.dbSNP155.GRCh38")
     ArchR::installExtraPackages()
+    devtools::install_github('lhe17/nebula', upgrade=upgrade, ...)
 }
 
 if (sys.nframe() == 0L) {
