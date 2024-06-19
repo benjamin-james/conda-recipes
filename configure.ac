@@ -119,6 +119,8 @@ AC_SUBST(TORCHAUDIO_VERSION)
 ## 11. rstats
 ## 12. archr
 
-AC_CONFIG_FILES([3_torch.yml])
+AC_CONFIG_FILES([chungus/3_torch.yml])
+AC_CONFIG_FILES([cellbender/cellbender.yml])
+AC_CONFIG_FILES([chrombpnet/chrombpnet.yml])
 AC_OUTPUT
 

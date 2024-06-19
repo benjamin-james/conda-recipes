@@ -8,8 +8,12 @@ To install, run
   mamba env update --name=test1 --file=1_extra.yml
   mamba env update --name=test1 --file=2_rcore.yml
   mamba env update --name=test1 --file=3_torch.yml
-  mamba env update --name=test1 --file=4_bioc.yml
-  mamba env update --name=test1 --file=5_bioconda.yml
+  mamba env update --name=test1 --file=4_bioconductor.yml
+  mamba env update --name=test1 --file=5_bioconda_core.yml
+  mamba env update --name=test1 --file=6_scverse.yml
+  mamba env update --name=test1 --file=9_pip.yml
+  conda activate test1
+  Rscript -e install.R
 #+END_SRC
 ** Updates
 - Once https://github.com/bioconda/bioconda-recipes/issues/37805 is fixed pysam can be installed on 3.11 or greater
