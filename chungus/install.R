@@ -20,7 +20,7 @@ installExtraPackages <- function(upgrade="never", seurat=TRUE, ...) {
     devtools::install_github('cole-trapnell-lab/monocle3', upgrade=upgrade, ...)
     devtools::install_github('cole-trapnell-lab/cicero-release', ref='monocle3', upgrade=upgrade, ...)
     devtools::install_github('scverse/anndataR', upgrade=upgrade, ...)
-    devtools::install_github('bnprks/BPCells/r', "0.2.0", upgrade=upgrade, ...)
+    devtools::install_github('bnprks/BPCells/r', upgrade=upgrade, ...)
     devtools::install_github('chrchang/plink-ng', subdir='2.0/pgenlibr', upgrade=upgrade, ...)
     devtools::install_github('GreenleafLab/ArchR', ref='master', repos=BiocManager::repositories(), upgrade=upgrade, ...)
     devtools::install_github("caleblareau/gchromVAR", upgrade=upgrade, ...)
