@@ -24,7 +24,7 @@ dependencies:
   - bioconda::gtfparse
   - bioconda::pyjaspar
   - bioconda::kb-python
-  - bioconda::py-bgzip
+  - conda-forge::py-bgzip
   ## scvi
   - conda-forge::scvi-tools
 
