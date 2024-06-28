@@ -3,8 +3,8 @@ channels:
   - bioconda
 
 dependencies:
-  - conda-forge::anndata>=0.10.5
-  - conda-forge::scanpy>=1.9.7
+  - conda-forge::anndata>=0.10.8
+  - conda-forge::scanpy>=1.10.2
   - conda-forge::muon
   - conda-forge::squidpy
   #  - bioconda::mnnpy ## needs 3.10 

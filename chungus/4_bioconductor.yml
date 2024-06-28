@@ -58,6 +58,7 @@ dependencies:
   - bioconda::bioconductor-gsvadata
   - bioconda::bioconductor-rdgidb
   - bioconda::bioconductor-reactome.db
+  - bioconda::bioconductor-reactomepa
   - bioconda::bioconductor-mirbase.db
   - bioconda::bioconductor-milor
   ## deg

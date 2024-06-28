@@ -23,6 +23,7 @@ dependencies:
   - bioconda::cromwell
   - bioconda::caper
   - bioconda::ucsc-bedgraphtobigwig
+  - bioconda::deeptools
   - bioconda::pybigwig
   ##- bioconda::meme ## TODO icu error
   - bioconda::homer

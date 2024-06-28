@@ -12,6 +12,7 @@ dependencies:
   - conda-forge::numpy
   - conda-forge::scipy
   - conda-forge::scikit-learn
+  - conda-forge::matplotlib<3.8.0
   ### compression/storage
   - conda-forge::zstd
   - conda-forge::zlib
