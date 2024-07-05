@@ -26,6 +26,7 @@ dependencies:
   ## python
   - conda-forge::seaborn
   - conda-forge::statsmodels
+  - conda-forge::xlsxwriter
   #- conda-forge::scikit-misc ## TODO: update when allowing py 3.12 builds
   ## julia
   - conda-forge::pyjulia
