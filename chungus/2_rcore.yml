@@ -28,6 +28,7 @@ dependencies:
   - conda-forge::r-rcppeigen
   - conda-forge::r-rcpparmadillo
   - conda-forge::r-rcppannoy
+  - conda-forge::r-nmslibr
   - conda-forge::r-rcpphnsw
   - conda-forge::r-rcppml
   - conda-forge::r-rcppziggurat
