@@ -10,6 +10,7 @@ dependencies:
     #- dictys
     - pychromvar
     - magic-impute
+    - scikit-network
     - skggm
     - git+https://github.com/CostaLab/scopen ### pip link doesn't work
     - git+https://github.com/FinucaneLab/fine-mapping-inf#subdirectory=susieinf

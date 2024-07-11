@@ -51,6 +51,7 @@ dependencies:
   - conda-forge::r-ivreg
   - conda-forge::r-plm
   - conda-forge::r-msm
+  - conda-forge::r-rrcov
   ## plotting
   - conda-forge::r-ggpubr
   - conda-forge::r-ggrastr
