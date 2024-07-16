@@ -15,4 +15,5 @@ packages = ["IJulia",
             "Literate",
             "Bio"];
 using Pkg;
+Pkg.resolve();
 Pkg.add(packages);
