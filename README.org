@@ -1,9 +1,11 @@
 * Conda files
+** chungus
 To install, run
 #+BEGIN_SRC bash
   git clone https://github.com/benjamin-james/conda-recipes
   cd conda-recipes
   ./configure
+  cd chungus
   mamba env create --name=test1 --file=0_core.yml
   mamba env update --name=test1 --file=1_extra.yml
   mamba env update --name=test1 --file=2_rcore.yml
@@ -14,6 +16,15 @@ To install, run
   mamba env update --name=test1 --file=9_pip.yml
   conda activate test1
   Rscript -e install.R
+#+END_SRC
+** visiumhd
+To install, run
+#+BEGIN_SRC bash
+  git clone https://github.com/benjamin-james/conda-recipes
+  cd conda-recipes
+  ./configure
+  cd visiumhd
+  mamba env create --name=visiumhd --file=visiumhd.yml
 #+END_SRC
 ** Updates
 - Once https://github.com/bioconda/bioconda-recipes/issues/37805 is fixed pysam can be installed on 3.11 or greater

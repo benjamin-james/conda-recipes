@@ -15,11 +15,9 @@ dependencies:
   - conda-forge::leidenalg
   - conda-forge::fastparquet
   - conda-forge::py-opencv
-  - conda-forge::matplotlib==3.0.*
-  - conda-forge::seaborn
-  - bioconda::scanpy
-  - bioconda::anndata
-  - bioconda::squidpy
+  - conda-forge::scanpy
+  - conda-forge::anndata
+  - conda-forge::squidpy
   - conda-forge::pip
   - pip:
      - bin2cell
