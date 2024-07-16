@@ -1,0 +1,24 @@
+name: visiumhd
+
+channels:
+  - conda-forge
+  - bioconda
+  @NVIDIA_CHANNEL@
+  
+dependencies:
+  - conda-forge::python==3.11
+  - conda-forge::jupyterlab
+  - conda-forge::notebook
+  @TENSORFLOW_VERSION@
+  - conda-forge::stardist
+  - conda-forge::python-igraph
+  - conda-forge::leidenalg
+  - conda-forge::fastparquet
+  - conda-forge::py-opencv
+  - bioconda::scanpy
+  - bioconda::anndata
+  - bioconda::squidpy
+  - conda-forge::pip
+  - pip:
+     - bin2cell
+  

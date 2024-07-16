@@ -1,6 +1,6 @@
 channels:
-  - conda-forge
   - bioconda
+  - conda-forge
 
 dependencies:
   - bioconda::igv
@@ -18,7 +18,7 @@ dependencies:
   - bioconda::nextflow
   - bioconda::plink
   - bioconda::plink2
-  - bioconda::perl-bioperl
+  #- bioconda::perl-bioperl ## TODO openssl bug
   - bioconda::sinto ## requires pysam
   - bioconda::cromwell
   - bioconda::caper
@@ -42,3 +42,4 @@ dependencies:
   - bioconda::igvtools
   ## other
   #- bioconda::pydnase ## error: py<11 required
+  - conda-forge::openssl

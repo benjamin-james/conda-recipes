@@ -85,3 +85,4 @@ dependencies:
   - conda-forge::r-units
   - conda-forge::r-sf
   - conda-forge::r-spdep
+  - conda-forge::openssl

@@ -11,7 +11,9 @@ dependencies:
     - pychromvar
     - magic-impute
     - scikit-network
+    - bin2cell
     - skggm
+    - scdrs==1.0.2
     - git+https://github.com/CostaLab/scopen ### pip link doesn't work
     - git+https://github.com/FinucaneLab/fine-mapping-inf#subdirectory=susieinf
     - git+https://github.com/FinucaneLab/fine-mapping-inf#subdirectory=finemapinf

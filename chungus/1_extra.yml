@@ -24,11 +24,14 @@ dependencies:
   - conda-forge::pandoc
   - conda-forge::r-irkernel
   - conda-forge::octave_kernel
+  - conda-forge::xeus-cling
   ## python
   - conda-forge::seaborn
   - conda-forge::statsmodels
   - conda-forge::xlsxwriter
   - conda-forge::python-annoy
+  - conda-forge::fastparquet
+  # - conda-forge::py-opencv ## TODO libgdal errro
   #- conda-forge::scikit-misc ## TODO: update when allowing py 3.12 builds
   ## julia
   - conda-forge::pyjulia

@@ -120,6 +120,7 @@ AC_SUBST(TORCHAUDIO_VERSION)
 ## 12. archr
 
 AC_CONFIG_FILES([chungus/3_torch.yml])
+AC_CONFIG_FILES([visiumhd/visiumhd.yml])
 AC_CONFIG_FILES([cellbender/cellbender.yml])
 AC_CONFIG_FILES([chrombpnet/chrombpnet.yml])
 AC_OUTPUT
