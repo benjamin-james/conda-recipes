@@ -26,6 +26,7 @@ To install, run
 - conda-forge::pytorch=*=*cpu* is not installable with pytorch torchvision
 ** installing kernels
 *** julia
+First have juliaup add a version and then
 #+BEGIN_SRC julia
   using Pkg;
   Pkg.update();

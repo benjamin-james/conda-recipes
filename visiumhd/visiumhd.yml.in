@@ -15,6 +15,7 @@ dependencies:
   - conda-forge::leidenalg
   - conda-forge::fastparquet
   - conda-forge::py-opencv
+  - conda-forge::opencv=*=*headless*
   - conda-forge::scanpy
   - conda-forge::anndata
   - conda-forge::squidpy

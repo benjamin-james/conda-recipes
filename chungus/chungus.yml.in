@@ -23,6 +23,7 @@ dependencies:
   - conda-forge::hdf5
   - conda-forge::git
   - conda-forge::h5py
+  - conda-forge::hdf5plugin
   - conda-forge::arrow-cpp
   ### scientific
   - conda-forge::igraph
@@ -38,6 +39,8 @@ dependencies:
   - conda-forge::autoconf
   - conda-forge::automake
   - conda-forge::libtool
+  ### gl
+  - conda-forge::opencv
   ### gnu
   - conda-forge::binutils
   - conda-forge::coreutils
@@ -65,7 +68,7 @@ dependencies:
   - conda-forge::r-base
   - conda-forge::perl
   - conda-forge::rust
-  - conda-forge::julia
+  - conda-forge::juliaup
   - conda-forge::octave
   - conda-forge::go
   - conda-forge::sbcl
@@ -89,6 +92,7 @@ dependencies:
   - conda-forge::scikit-posthocs
   - conda-forge::editdistance
   - conda-forge::nilearn
+  - conda-forge::tabulate==0.7.5 ## skggm
   ## julia
   - conda-forge::pyjulia
   - conda-forge::r-juliacall
