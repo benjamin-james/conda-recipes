@@ -9,6 +9,7 @@ To install, run
   conda activate chungus
   ./chungus/install.R
   ./chungus/install.jl
+  cargo install evcxr_jupyter
 #+END_SRC
 ** visiumhd
 To install, run

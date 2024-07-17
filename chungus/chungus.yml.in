@@ -253,6 +253,7 @@ dependencies:
   - bioconda::bioconductor-reactomepa
   - bioconda::bioconductor-mirbase.db
   - bioconda::bioconductor-milor
+  - bioconda::bioconductor-scdesign3
   ## deg
   - bioconda::bioconductor-deseq2
   - bioconda::bioconductor-ruvseq
@@ -296,7 +297,7 @@ dependencies:
   - conda-forge::r-seuratobject>=5.0.0
   #- bioconda::r-monocle3 ## requires 4.2
   - bioconda::r-liger
-  - bioconda::scprep
+  #- bioconda::scprep ## 3.11 build not working with pandas
   ## igv
   #- bioconda::bioconductor-igvr ##old r (<3.7) required
   - bioconda::igv-reports
@@ -325,7 +326,7 @@ dependencies:
   - bioconda::pybiomart
   - bioconda::gtfparse
   - bioconda::pyjaspar
-  - bioconda::kb-python
+  ##- bioconda::kb-python ### TODO reinstall when uses more modern pandas 
   - conda-forge::py-bgzip
   - conda-forge::scvi-tools
   - conda-forge::stardist
