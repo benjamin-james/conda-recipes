@@ -320,7 +320,9 @@ dependencies:
   - bioconda::velocyto.py
   - bioconda::scrublet
   - bioconda::harmonypy
+  - bioconda::bbknn
   - bioconda::multivelo
+  - bioconda::magic-impute
   ## python
   - bioconda::pyranges
   - bioconda::pybedtools
@@ -351,9 +353,7 @@ dependencies:
   - pip:
     - symphonypy
     - igv-notebook
-    - bbknn
     - pychromvar
-    - magic-impute
     - scikit-network
     - tangermeme
     - pymemesuite
