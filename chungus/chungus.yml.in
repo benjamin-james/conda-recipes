@@ -4,7 +4,6 @@ channels:
   - bioconda
   @NVIDIA_CHANNEL@
 
-# to fix for later: FAISS?
 dependencies:
   - conda-forge::mamba
   - conda-forge::python==3.11
@@ -89,6 +88,7 @@ dependencies:
   - conda-forge::scikit-misc
   - conda-forge::scikit-posthocs
   - conda-forge::editdistance
+  - conda-forge::nilearn
   ## julia
   - conda-forge::pyjulia
   - conda-forge::r-juliacall
@@ -318,6 +318,7 @@ dependencies:
   - bioconda::celltypist
   - conda-forge::scvelo
   - conda-forge::bamnostic
+  - conda-forge::schist
   - bioconda::velocyto.py
   - bioconda::scrublet
   - bioconda::harmonypy
