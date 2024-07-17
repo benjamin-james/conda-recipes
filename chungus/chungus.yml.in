@@ -329,9 +329,24 @@ dependencies:
   - conda-forge::py-bgzip
   - conda-forge::scvi-tools
   - conda-forge::stardist
+  ## deep learning
+  - conda-forge::keras>=3.0.0
+  - conda-forge::transformers
   @PYTORCH_VERSION@
   - @TORCH_CHANNEL@::torchvision
   @TORCHAUDIO_VERSION@
   @PYXGB_VERSION@
   @TENSORFLOW_VERSION@
   - conda-forge::pip
+    - symphonypy
+    - igv-notebook
+    - bbknn
+    - pychromvar
+    - magic-impute
+    - scikit-network
+    - bin2cell
+    - skggm
+    ## - scdrs==1.0.2 ## downgrades pandas
+    - git+https://github.com/CostaLab/scopen ### pip link doesn't work
+    - git+https://github.com/FinucaneLab/fine-mapping-inf#subdirectory=susieinf
+    - git+https://github.com/FinucaneLab/fine-mapping-inf#subdirectory=finemapinf

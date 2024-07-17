@@ -95,7 +95,7 @@ AS_IF([test "x$CUDA_VERSION" != "xnull"],
 AC_SUBST(PYXGB_VERSION)
 
 AS_IF([test "x$CUDA_VERSION" != "xnull"],
-    [TORCHAUDIO_VERSION="- pytorch::torchaudio"],
+    [TORCHAUDIO_VERSION="- pytorch::torchaudio=*=*_cu*"],
     [TORCHAUDIO_VERSION=""])
 AC_SUBST(TORCHAUDIO_VERSION)
 

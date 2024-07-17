@@ -4,8 +4,6 @@ packages = ["IJulia",
             "RCall",
             "PyCall",
             "StatsKit",
-            "StableRNGs",
-            "ThreadsX",
             "Plots",
             "Makie",
             "Gadfly",
@@ -15,5 +13,7 @@ packages = ["IJulia",
             "Literate",
             "Bio"];
 using Pkg;
-Pkg.resolve();
+Pkg.update();
 Pkg.add(packages);
+
+#            "StableRNGs",
