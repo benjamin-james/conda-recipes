@@ -81,15 +81,18 @@ dependencies:
   - conda-forge::xeus-cling
   ## python
   - conda-forge::seaborn
+  - conda-forge::plotnine
   - conda-forge::statsmodels
   - conda-forge::xlsxwriter
   - conda-forge::fastparquet
   - conda-forge::py-opencv 
-  - conda-forge::scikit-misc 
+  - conda-forge::scikit-misc
+  - conda-forge::scikit-posthocs
+  - conda-forge::editdistance
   ## julia
   - conda-forge::pyjulia
   - conda-forge::r-juliacall
-  ## download
+  ## assorted
   - conda-forge::bdbag
   - conda-forge::pytables
   - conda-forge::natsort
@@ -326,13 +329,18 @@ dependencies:
   - bioconda::pybiomart
   - bioconda::gtfparse
   - bioconda::pyjaspar
+  - bioconda::pyfaidx
+  - bioconda::logomaker
   ##- bioconda::kb-python ### TODO reinstall when uses more modern pandas 
   - conda-forge::py-bgzip
   - conda-forge::scvi-tools
   - conda-forge::stardist
+  - conda-forge::apricot-select
+  - conda-forge::pomegranate
   ## deep learning
   - conda-forge::keras>=3.0.0
   - conda-forge::transformers
+  - conda-forge::einops
   @PYTORCH_VERSION@
   - @TORCH_CHANNEL@::torchvision
   @TORCHAUDIO_VERSION@
@@ -347,9 +355,12 @@ dependencies:
     - pychromvar
     - magic-impute
     - scikit-network
+    - tangermeme
+    - pymemesuite
     - bin2cell
     - skggm
     ## - scdrs==1.0.2 ## downgrades pandas
+    - git+https://github.com/jmschrei/bpnet-lite
     - git+https://github.com/CostaLab/scopen ### pip link doesn't work
     - git+https://github.com/FinucaneLab/fine-mapping-inf#subdirectory=susieinf
     - git+https://github.com/FinucaneLab/fine-mapping-inf#subdirectory=finemapinf

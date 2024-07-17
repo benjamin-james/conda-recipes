@@ -9,7 +9,7 @@ To install, run
   conda activate chungus
   ./chungus/install.R
   ./chungus/install.jl
-  cargo install evcxr_jupyter
+  
 #+END_SRC
 ** visiumhd
 To install, run
@@ -24,3 +24,23 @@ To install, run
 - Once https://github.com/bioconda/bioconda-recipes/issues/37805 is fixed pysam can be installed on 3.11 or greater
 - pytorch::pytorch-cpu requires mkl
 - conda-forge::pytorch=*=*cpu* is not installable with pytorch torchvision
+** installing kernels
+*** julia
+#+BEGIN_SRC julia
+  using Pkg;
+  Pkg.update();
+  Pkg.add("IJulia");
+#+END_SRC
+*** rust
+#+BEGIN_SRC bash
+  cargo install evcxr_jupyter && evcxr_jupyter --install
+#+END_SRC
+*** go
+#+BEGIN_SRC bash
+  go install github.com/gopherdata/gophernotes@v0.7.5
+  mkdir -p $CONDA_PREFIX/share/jupyter/kernels/gophernotes
+  cd $CONDA_PREFIX/share/jupyter/kernels/gophernotes
+  cp "$(go env GOPATH)"/pkg/mod/github.com/gopherdata/gophernotes@v0.7.5/kernel/*  "."
+  chmod +w kernel.json
+  sed "s|gophernotes|$(go env GOPATH)/bin/gophernotes|" < kernel.json.in > kernel.json
+#+END_SRC
