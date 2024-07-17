@@ -336,8 +336,10 @@ dependencies:
   - @TORCH_CHANNEL@::torchvision
   @TORCHAUDIO_VERSION@
   @PYXGB_VERSION@
+  @FAISS_VERSION@
   @TENSORFLOW_VERSION@
   - conda-forge::pip
+  - pip:
     - symphonypy
     - igv-notebook
     - bbknn
