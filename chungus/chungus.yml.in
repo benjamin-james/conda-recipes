@@ -158,6 +158,7 @@ dependencies:
   - conda-forge::r-aer
   - conda-forge::r-ivreg
   - conda-forge::r-plm
+  - conda-forge::r-pim
   - conda-forge::r-msm
   - conda-forge::r-rrcov
   ## plotting
@@ -185,6 +186,9 @@ dependencies:
   - conda-forge::r-uwot
   - conda-forge::r-rtsne
   - conda-forge::r-igraph
+  - conda-forge::r-pls
+  - conda-forge::r-spls
+  - conda-forge::r-plsdof
   ## archr
   - conda-forge::r-rhandsontable
   - conda-forge::r-shinythemes
@@ -262,6 +266,8 @@ dependencies:
   - bioconda::bioconductor-mirbase.db
   - bioconda::bioconductor-milor
   - bioconda::bioconductor-scdesign3
+  - bioconda::bioconductor-ropls
+  - bioconda::bioconductor-gpls
   ## deg
   - bioconda::bioconductor-deseq2
   - bioconda::bioconductor-ruvseq
