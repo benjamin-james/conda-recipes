@@ -361,6 +361,7 @@ dependencies:
   @PYXGB_VERSION@
   @FAISS_VERSION@
   @TENSORFLOW_VERSION@
+  - conda-forge::tensorflow
   - conda-forge::pip
   - pip:
     - symphonypy

@@ -10,6 +10,7 @@ dependencies:
   - conda-forge::jupyterlab
   - conda-forge::notebook
   @TENSORFLOW_VERSION@
+  - conda-forge::tensorflow
   - conda-forge::stardist
   - conda-forge::python-igraph
   - conda-forge::leidenalg
