@@ -1,4 +1,15 @@
 * Conda files
+** Docker
+*** GPU-based
+#+BEGIN_SRC bash
+  docker build -f Dockerfile.cuda -t conda-recipes:cuda-12.1.0 --build-arg CUDA_VERSION=12.1.0 .
+  docker run --gpus all -it docker.io/library/conda-recipes:cuda-12.1.0
+#+END_SRC
+*** CPU -based
+#+BEGIN_SRC bash
+  docker build -f Dockerfile.cpu -t conda-recipes:cpu .
+  docker run -it docker.io/library/conda-recipes:cpu
+#+END_SRC
 ** chungus
 To install, run
 #+BEGIN_SRC bash

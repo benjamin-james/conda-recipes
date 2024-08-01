@@ -29,4 +29,6 @@ RUN conda env create --file=cellbender/cellbender.yml --name=cellbender
 RUN conda env create --file=chrombpnet/chrombpnet.yml --name=chrombpnet
 RUN conda env create --file=visiumhd/visiumhd.yml --name=visiumhd
 RUN conda env create --file=chungus/chungus.yml --name=chungus
+RUN conda run -n chungus Rscript /app/conda-recipes/chungus/install.R
+RUN conda run -n chungus julia -E 'using Pkg; Pkg.add("IJulia")'
 CMD [ "/bin/bash" ]
