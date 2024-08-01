@@ -92,7 +92,7 @@ dependencies:
   - conda-forge::scikit-posthocs
   - conda-forge::editdistance
   - conda-forge::nilearn
-  - conda-forge::tabulate==0.7.5 ## skggm
+  #- conda-forge::tabulate==0.7.5 ## skggm
   ## julia
   - conda-forge::pyjulia
   - conda-forge::r-juliacall
@@ -370,7 +370,7 @@ dependencies:
     - tangermeme
     - pymemesuite
     - bin2cell
-    - skggm
+    # - skggm ## TODO fix tabulate 
     - scdrs==1.0.2 
     - git+https://github.com/jmschrei/bpnet-lite
     - git+https://github.com/CostaLab/scopen ### pip link doesn't work
