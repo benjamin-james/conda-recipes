@@ -1,0 +1,32 @@
+FROM debian:latest
+LABEL maintainer="Benjamin James <benjames@mit.edu>"
+
+ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
+ENV PATH=/opt/conda/bin:$PATH
+
+RUN apt-get update --fix-missing && \
+    apt-get install -y wget bzip2 ca-certificates curl git tini && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
+RUN wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh && \
+    /bin/bash ~/miniconda.sh -b -p /opt/conda && \
+    rm ~/miniconda.sh && \
+    /opt/conda/bin/conda clean --all -y && \
+    /opt/conda/bin/conda update --all -y && \
+    /opt/conda/bin/conda install -n base conda-libmamba-solver -y && \
+    /opt/conda/bin/conda config --system --set solver libmamba && \
+    ln -s /opt/conda/etc/profile.d/conda.sh /etc/profile.d/conda.sh && \
+    echo ". /opt/conda/etc/profile.d/conda.sh" >> ~/.bashrc && \
+    echo "conda activate base" >> ~/.bashrc
+
+ENTRYPOINT ["/usr/bin/tini", "--"]
+SHELL ["/bin/bash", "--login", "-c"]
+WORKDIR /app/conda-recipes
+COPY . /app/conda-recipes
+RUN ./configure
+RUN conda env create --file=cellbender/cellbender.yml --name=cellbender
+RUN conda env create --file=chrombpnet/chrombpnet.yml --name=chrombpnet
+RUN conda env create --file=visiumhd/visiumhd.yml --name=visiumhd
+RUN conda env create --file=chungus/chungus.yml --name=chungus
+CMD [ "/bin/bash" ]
