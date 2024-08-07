@@ -161,6 +161,7 @@ dependencies:
   - conda-forge::r-pim
   - conda-forge::r-msm
   - conda-forge::r-rrcov
+  - conda-forge::r-littler
   ## plotting
   - conda-forge::r-ggpubr
   - conda-forge::r-ggrastr
@@ -171,6 +172,9 @@ dependencies:
   - conda-forge::r-ggbeeswarm
   - conda-forge::r-cowplot
   - conda-forge::r-patchwork
+  - conda-forge::r-rgl
+  - conda-forge::r-lattice
+  - conda-forge::r-paletteer
   ## ml
   - conda-forge::r-caret
   - conda-forge::r-glmnet
@@ -272,6 +276,7 @@ dependencies:
   - bioconda::bioconductor-deseq2
   - bioconda::bioconductor-ruvseq
   - bioconda::bioconductor-limma
+  - bioconda::bioconductor-variancePartition
   - bioconda::bioconductor-sva
   - bioconda::bioconductor-edger
   - bioconda::bioconductor-mast
