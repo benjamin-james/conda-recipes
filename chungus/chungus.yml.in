@@ -292,16 +292,20 @@ dependencies:
   - bioconda::kallisto
   - bioconda::bustools  
   - bioconda::subread
+  - bioconda::picard
+  - bioconda::chip-r
   - bioconda::star
   - bioconda::alevin-fry
   - bioconda::snakemake
-  - bioconda::nextflow
+  - bioconda::nextflow>=24.04.4
+  - bioconda::nf-core>=2.14.1
   - bioconda::plink
   - bioconda::plink2
   - bioconda::perl-bioperl
   - bioconda::sinto ## requires pysam
   - bioconda::cromwell
   - bioconda::caper
+  - bioconda::croo
   - bioconda::ucsc-bedgraphtobigwig
   - bioconda::deeptools
   - bioconda::pybigwig
@@ -376,6 +380,7 @@ dependencies:
     - tangermeme
     - pymemesuite
     - bin2cell
+    - qc2tsv
     # - skggm ## TODO fix tabulate 
     - scdrs==1.0.2 
     - git+https://github.com/jmschrei/bpnet-lite
