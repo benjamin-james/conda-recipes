@@ -330,7 +330,7 @@ dependencies:
   ## scverse
   - conda-forge::anndata>=0.10.8
   - conda-forge::scanpy>=1.10.2
-  - conda-forge::muon
+  - conda-forge::muon>=0.1.6
   - conda-forge::squidpy
   #  - bioconda::mnnpy ## needs 3.10 
   - bioconda::celltypist
@@ -343,6 +343,7 @@ dependencies:
   - bioconda::bbknn
   - bioconda::multivelo
   - bioconda::magic-impute
+  - bioconda::macs2
   ## python
   - bioconda::pyranges
   - bioconda::pybedtools
