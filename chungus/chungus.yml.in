@@ -370,7 +370,7 @@ dependencies:
   @PYXGB_VERSION@
   @FAISS_VERSION@
   @TENSORFLOW_VERSION@
-  - conda-forge::tensorflow==2.17.0
+  - conda-forge::tensorflow
   - conda-forge::pip
   - pip:
     - symphonypy

@@ -1,9 +1,10 @@
-ARG CUDA_VERSION=11.8.0
+ARG CUDA_VERSION=12.1.0
 FROM nvidia/cuda:${CUDA_VERSION}-devel-ubuntu22.04
 LABEL maintainer="Benjamin James <benjames@mit.edu>"
 
 ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
 ENV PATH=/opt/conda/bin:$PATH
+ENV CONDA_OVERRIDE_CUDA=${CUDA_VERSION}
 
 RUN apt-get update --fix-missing && \
     apt-get install -y wget bzip2 ca-certificates curl git tini && \
