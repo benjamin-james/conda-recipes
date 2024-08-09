@@ -1,7 +1,5 @@
 AC_INIT([conda-recipes], [0.0.1])
 
-#AC_ARG_ENABLE([CONDA_PREFIX], [Environment variable designating the current conda prefix], 
-### Check for Conda prefix and conda command
 AC_ARG_VAR([CONDA_PREFIX], [CONDA_PREFIX environment variable is not set. Please set it before configuring.])
 
 AC_DEFUN([AC_CHECK_MAMBA_OR_CONDA], [
@@ -20,41 +18,26 @@ AC_DEFUN([AC_CHECK_MAMBA_OR_CONDA], [
 
 AC_CHECK_MAMBA_OR_CONDA
 
-### Check for OS based compiler packages
-dnl AC_CANONICAL_HOST
-dnl AC_MSG_CHECKING([for operating system $host_os])
-dnl case "$host_os" in
-dnl   *linux*)
-dnl     AC_MSG_RESULT([Linux detected])
-dnl     AC_SUBST([CC], [conda-forge::gcc_linux-64])
-dnl     AC_SUBST([CXX], [conda-forge::gxx_linux-64])
-dnl     AC_SUBST([FC], [conda-forge::gfortran_linux-64])
-dnl     ;;
-dnl   *darwin*)
-dnl     AC_MSG_RESULT([Mac OS X detected])
-dnl     AC_SUBST([CC], [conda-forge::clang_osx-64])
-dnl     AC_SUBST([CXX], [conda-forge::clangxx_osx-64])
-dnl     AC_SUBST([FC], [conda-forge::gfortran_osx-64])
-dnl     ;;
-dnl   *)
-dnl     AC_MSG_RESULT([Other OS, using default])
-dnl     AC_SUBST([CC], [conda-forge::c-compiler])
-dnl     AC_SUBST([CXX], [conda-forge::cxx-compiler])
-dnl     AC_SUBST([FC], [conda-forge::fortran-compiler])
-dnl     ;;
-dnl esac
-
 ### Check CUDA version
 AC_DEFUN([AX_CUDA_VERSION], [
     AC_CHECK_PROG([NVCC_FOUND], [nvcc], [yes], [no])
     if test "x$NVCC_FOUND" = "xyes"; then
         CUDA_VERSION=`nvcc --version | grep "release" | sed 's/.*release //' | sed 's/,.*//'`
-	AC_MSG_NOTICE([Using CUDA version $CUDA_VERSION])
+	CUDA_VERSION_CONDA=`echo cuda$CUDA_VERSION | tr -d .`
+        CUDA_VERSION_MAJOR=`echo $CUDA_VERSION | cut -d. -f1`
+        CUDA_VERSION_MINOR=`echo $CUDA_VERSION | cut -d. -f2`
+        AC_MSG_NOTICE([Using CUDA version $CUDA_VERSION])
     else
         CUDA_VERSION="null"
-	AC_MSG_NOTICE([Not using CUDA])
+	CUDA_VERSION_CONDA="cpu"
+        CUDA_VERSION_MAJOR="null"
+        CUDA_VERSION_MINOR="null"
+        AC_MSG_NOTICE([Not using CUDA])
     fi
     AC_SUBST([CUDA_VERSION], [$CUDA_VERSION])
+    AC_SUBST([CUDA_VERSION_CONDA], [$CUDA_VERSION_CONDA])
+    AC_SUBST([CUDA_VERSION_MAJOR], [$CUDA_VERSION_MAJOR])
+    AC_SUBST([CUDA_VERSION_MINOR], [$CUDA_VERSION_MINOR])
 ])
 
 AX_CUDA_VERSION
@@ -65,7 +48,7 @@ AS_IF([test "x$CUDA_VERSION" != "xnull"],
 AC_SUBST(PYTORCH_VERSION)
 
 AS_IF([test "x$CUDA_VERSION" != "xnull"],
-    [TENSORFLOW_VERSION="- conda-forge::tensorflow-gpu"],
+    [TENSORFLOW_VERSION="- conda-forge::tensorflow-gpu=*=$CUDA_VERSION_CONDA*"],
     [TENSORFLOW_VERSION="- conda-forge::tensorflow-cpu"])
 AC_SUBST(TENSORFLOW_VERSION)
 
