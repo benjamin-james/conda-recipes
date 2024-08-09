@@ -23,7 +23,7 @@ AC_DEFUN([AX_CUDA_VERSION], [
     AC_CHECK_PROG([NVCC_FOUND], [nvcc], [yes], [no])
     if test "x$NVCC_FOUND" = "xyes"; then
         CUDA_VERSION=`nvcc --version | grep "release" | sed 's/.*release //' | sed 's/,.*//'`
-	CUDA_VERSION_CONDA=`echo cuda$CUDA_VERSION | tr -d. -f1`
+	CUDA_VERSION_CONDA=`echo cuda$CUDA_VERSION | cut -d. -f1`
         CUDA_VERSION_MAJOR=`echo $CUDA_VERSION | cut -d. -f1`
         CUDA_VERSION_MINOR=`echo $CUDA_VERSION | cut -d. -f2`
         AC_MSG_NOTICE([Using CUDA version $CUDA_VERSION])
