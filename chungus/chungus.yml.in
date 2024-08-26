@@ -40,7 +40,7 @@ dependencies:
   - conda-forge::automake
   - conda-forge::libtool
   ### gl
-  - conda-forge::opencv
+  - conda-forge::opencv=*=*headless*
   ### gnu
   - conda-forge::binutils
   - conda-forge::coreutils
