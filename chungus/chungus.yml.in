@@ -7,7 +7,7 @@ channels:
 dependencies:
   - conda-forge::mamba
   - conda-forge::python==3.11
-  - conda-forge::r-base==4.3.*
+  - conda-forge::r-base==4.4.*
  ### numerical
   - conda-forge::cython
   - conda-forge::numba
@@ -332,6 +332,10 @@ dependencies:
   - conda-forge::scanpy>=1.10.2
   - conda-forge::muon>=0.1.6
   - conda-forge::squidpy
+  - conda-forge::spatialdata
+  - conda-forge::napari-spatialdata
+  - conda-forge::spatialdata-io
+  - conda-forge::spatialdata-plot
   #  - bioconda::mnnpy ## needs 3.10 
   - bioconda::celltypist
   - conda-forge::scvelo
