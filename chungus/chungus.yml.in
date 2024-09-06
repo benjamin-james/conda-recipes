@@ -170,6 +170,8 @@ dependencies:
   - conda-forge::r-ggsci
   - conda-forge::r-ggeffects
   - conda-forge::r-ggbeeswarm
+  - conda-forge::r-ggupset
+  - conda-forge::r-upsetr
   - conda-forge::r-cowplot
   - conda-forge::r-patchwork
   - conda-forge::r-rgl
@@ -212,6 +214,7 @@ dependencies:
   - conda-forge::graph-tool
   ## bioc
   - r-biocmanager
+  - conda-forge::r-homologene
   - bioconda::bioconductor-singlecellexperiment
   - bioconda::bioconductor-multiassayexperiment
   - bioconda::bioconductor-treesummarizedexperiment
