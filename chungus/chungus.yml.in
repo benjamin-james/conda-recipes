@@ -162,6 +162,9 @@ dependencies:
   - conda-forge::r-msm
   - conda-forge::r-rrcov
   - conda-forge::r-littler
+  - conda-forge::r-tidybayes
+  - conda-forge::r-rstan
+  - conda-forge::r-brms
   ## plotting
   - conda-forge::r-ggpubr
   - conda-forge::r-ggrastr
