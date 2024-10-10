@@ -278,6 +278,7 @@ dependencies:
   - bioconda::bioconductor-scdesign3
   - bioconda::bioconductor-ropls
   - bioconda::bioconductor-gpls
+  - bioconda::bioconductor-tradeseq
   ## deg
   - bioconda::bioconductor-deseq2
   - bioconda::bioconductor-ruvseq
@@ -293,6 +294,8 @@ dependencies:
   - bioconda::samtools
   - bioconda::htslib
   - bioconda::bedtools
+  - bioconda::gffread
+  - bioconda::liftoff
   - bioconda::bioawk
   - bioconda::bcftools
   - bioconda::kallisto
