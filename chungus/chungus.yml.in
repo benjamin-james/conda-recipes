@@ -7,7 +7,7 @@ channels:
 dependencies:
   - conda-forge::mamba
   - conda-forge::python==3.11
-  - conda-forge::r-base==4.4.*
+  - conda-forge::r-base==4.3.* ### TODO Change when BioC 3.20 releases October 30
  ### numerical
   - conda-forge::cython
   - conda-forge::numba
