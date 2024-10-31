@@ -110,6 +110,9 @@ dependencies:
   - conda-forge::pylint
   - conda-forge::python-lsp-server
   - conda-forge::fire
+  - conda-forge::pydantic
+  - conda-forge::simpleitk
+  - conda-forge::ghp-import
   ## R 
   - conda-forge::r-devtools
   - conda-forge::r-matrix
@@ -165,6 +168,7 @@ dependencies:
   - conda-forge::r-tidybayes
   - conda-forge::r-rstan
   - conda-forge::r-brms
+  - conda-forge::r-qgam
   ## plotting
   - conda-forge::r-ggpubr
   - conda-forge::r-ggrastr
@@ -206,6 +210,7 @@ dependencies:
   - conda-forge::r-units
   - conda-forge::r-sf
   - conda-forge::r-spdep
+  - conda-forge::r-harmonicmeanp
   ## network
   - conda-forge::networkx
   - conda-forge::python-infomap
@@ -225,6 +230,7 @@ dependencies:
   - bioconda::bioconductor-graph
   - bioconda::bioconductor-delayedarray
   - bioconda::bioconductor-delayedmatrixstats
+  - bioconda::bioconductor-mungesumstats
   - bioconda::bioconductor-biocgenerics
   - bioconda::bioconductor-biocparallel
   - bioconda::bioconductor-rhtslib
@@ -234,6 +240,7 @@ dependencies:
   - bioconda::bioconductor-rhdf5filters
   - bioconda::bioconductor-complexheatmap
   - bioconda::bioconductor-genomicfeatures
+  - bioconda::bioconductor-genomicscores
   - bioconda::bioconductor-rtracklayer
   - bioconda::bioconductor-motifmatchr
   - bioconda::bioconductor-tfbstools
@@ -251,6 +258,7 @@ dependencies:
   - bioconda::bioconductor-bsgenome
   - bioconda::bioconductor-bsgenome.hsapiens.ucsc.hg38
   - bioconda::bioconductor-bsgenome.hsapiens.ucsc.hg19
+  - bioconda::bioconductor-phastcons100way.ucsc.hg38
   - bioconda::bioconductor-bsgenome.mmusculus.ucsc.mm39
   - bioconda::bioconductor-bsgenome.mmusculus.ucsc.mm10
   - bioconda::bioconductor-txdb.hsapiens.ucsc.hg38.knowngene
